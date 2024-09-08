@@ -50,24 +50,29 @@
 
         // Função para salvar o progresso no Firebase
         function saveProgress(progress) {
-            const dbRef = ref(database, 'users/user1'); // Pode ajustar 'user1' para o ID do usuário
+            const dbRef = ref(database, 'users/user1'); // Ajuste 'user1' conforme necessário
             set(dbRef, {
                 progress: progress
+            }).then(() => {
+                console.log("Progresso salvo com sucesso!");
+            }).catch((error) => {
+                console.error("Erro ao salvar progresso: ", error);
             });
         }
 
         // Função para carregar o progresso do Firebase
         function loadProgress() {
-            const dbRef = ref(database);
-            get(child(dbRef, 'users/user1')).then((snapshot) => {
+            const dbRef = ref(database, 'users/user1'); // Certifique-se de que a referência seja a mesma
+            get(dbRef).then((snapshot) => {
                 if (snapshot.exists()) {
                     let progress = snapshot.val().progress;
                     document.getElementById("progress").innerText = progress;
+                    console.log("Progresso carregado: ", progress);
                 } else {
                     console.log("Nenhum progresso salvo.");
                 }
             }).catch((error) => {
-                console.error(error);
+                console.error("Erro ao carregar progresso: ", error);
             });
         }
 
