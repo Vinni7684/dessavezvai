@@ -1,21 +1,64 @@
 <!DOCTYPE html>
-<html lang:"pt-BR">
-
+<html lang="pt-BR">
 <head>
- <title>pfvr Deus do ceu</title>
- <meta charset="UFT-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <style>
-      body{
-       font-size:20px;
-       text-align:center;
-      }
-   </style>
-    
-<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progresso de Pontos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin-top: 50px;
+        }
+        h1 {
+            color: #333;
+        }
+        .points {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #ff4500;
+        }
+    </style>
+</head>
 <body>
-   CLIQUE PARA FICAR RICO: <a href="https://youtube.com"> aqui </a>
-    
-</body>
 
+    <h1>Clique na tela para ganhar pontos!</h1>
+    <div class="points">Progresso: <span id="progress">0</span> pontos</div>
+
+    <script>
+        // Função para criar ou atualizar um cookie
+        function setCookie(name, value, days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000)); // Cookie expira em 'days' dias
+            const expires = "expires=" + date.toUTCString();
+            document.cookie = name + "=" + value + ";" + expires + ";path=/";
+        }
+
+        // Função para obter o valor de um cookie
+        function getCookie(name) {
+            const decodedCookie = decodeURIComponent(document.cookie);
+            const cookies = decodedCookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                let cookie = cookies[i].trim();
+                if (cookie.indexOf(name + "=") === 0) {
+                    return cookie.substring((name + "=").length, cookie.length);
+                }
+            }
+            return "";
+        }
+
+        // Inicializa o progresso com o valor do cookie ou 0 se o cookie não existir
+        let progress = parseInt(getCookie("progress")) || 0;
+        document.getElementById("progress").innerText = progress;
+
+        // Função que incrementa o progresso ao clicar na tela
+        document.body.addEventListener('click', () => {
+            progress++;
+            document.getElementById("progress").innerText = progress;
+            setCookie("progress", progress, 7); // O cookie será salvo por 7 dias
+        });
+    </script>
+
+</body>
 </html>
