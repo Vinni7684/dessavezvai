@@ -5,118 +5,184 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REDAÇÕES NOTA MIL TOPZERAS</title>
     <style>
-        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: Georgia, 'Times New Roman', serif;
-            line-height: 1.7;
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
             max-width: 800px;
             margin: 0 auto;
-            padding: 15px;
-            background-color: #f5f5f0; /* Fundo claro e agradável para leitura */
+            padding: 20px;
+            background-color: #f8f8f8;
             color: #333;
         }
-
-        /* Título Principal */
-        h1 {
+        
+        header {
             text-align: center;
-            color: #2c5530; /* Verde escuro, cor comum no Enem */
-            font-weight: 900; /* Letra mais grossa */
-            border-bottom: 2px solid #d4af37; /* Dourado para um destaque */
-            padding-bottom: 10px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #2c5530;
+        }
+        
+        h1 {
+            color: #2c5530;
             font-size: 1.8em;
+            margin-bottom: 10px;
         }
-
-        /* Container de cada redação */
-        .redacao-container {
-            background-color: #fff;
-            margin: 25px 0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-left: 5px solid #2c5530; /* Destaque na lateral */
-        }
-
-        /* Cabeçalho da redação (Título e Botão) */
-        .redacao-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer; /* Indica que é clicável */
-            font-weight: 700; /* Letra mais grossa */
-            font-size: 1.1em;
-            color: #444;
-        }
-
-        /* Botão do olho */
-        .botao-olho {
-            background: none;
-            border: none;
-            font-size: 1.4em;
-            cursor: pointer;
-            padding: 5px 10px;
-            border-radius: 50%;
-            transition: background-color 0.2s;
-        }
-
-        .botao-olho:hover {
-            background-color: #f0f0f0;
-        }
-
-        /* Texto da redação */
-        .texto-redacao {
-            margin-top: 15px;
-            text-align: justify;
-            font-weight: 500; /* Texto principal também com peso maior para melhor leitura */
-            display: block; /* Inicialmente visível */
-        }
-
-        /* Classe para esconder a redação */
-        .escondido {
-            display: none;
-        }
-
-        /* Informações da redação (tema, autor) */
-        .info-redacao {
-            font-size: 0.9em;
+        
+        .descricao {
             color: #666;
             font-style: italic;
-            margin-top: 10px;
-            border-top: 1px dashed #ddd;
-            padding-top: 10px;
+        }
+        
+        .redacao {
+            background-color: white;
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .redacao-titulo {
+            color: #2c5530;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        
+        .redacao-info {
+            font-size: 0.9em;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .redacao-texto {
+            text-align: justify;
+            font-size: 1.05em;
+        }
+        
+        .redacao-texto p {
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #777;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
-    <h1>REDAÇÕES NOTA MIL TOPZERAS</h1>
-
-    <div id="lista-redacoes">
-        <!-- As redações serão inseridas aqui pelo JavaScript -->
-    </div>
-
-    <script>
-        // Dados das redações (Título, Tema, Autor, Texto)
-        const redacoes = [
-            {
-                titulo: "Redação Nota 1000 - ENEM 2020",
-                tema: "O estigma associado às doenças mentais na sociedade brasileira",
-                autor: "Isabella Gadelha, PA",
-                texto: `Nise da Silveira foi uma renomada psiquiatra brasileira que, indo contra a comunidade médica tradicional da sua época, lutou a favor de um tratamento humanizado para pessoas com transtornos psicológicos. No contexto nacional atual, indivíduos com patologias mentais ainda sofrem com diversos estigmas criados. Isso ocorre, pois faltam informações corretas sobre o assunto e, também, existe uma carência de representatividade desse grupo nas mídias.
-
-Primariamente, vale ressaltar que a ignorância é uma das principais causas da criação de preconceitos contra portadores de doenças psiquiátricas. Sob essa ótica, o pintor holandês Vincent Van Gogh foi alvo de agressões físicas e psicológicas por sofrer de transtornos neurológicos e não possuir o tratamento adequado. O ocorrido com o artista pode ser presenciado no corpo social brasileiro, visto que, apesar de uma parcela significativa da população lidar com alguma patologia mental, ainda são propagadas informações incorretas sobre o tema. Esse processo fortalece a ideia de que integrantes não são capazes de conviver em sociedade, reforçando estigmas antigos e criando novos. Dessa forma, a ignorância contribui para a estigmatização desses indivíduos e prejudica o coletivo.
-
-Ademais, a carência de representatividade nos veículos midiáticos fomenta o preconceito contra pessoas com distúrbios psicológicos. Nesse sentido, a série de televisão da emissora HBO, "Euphoria", mostra as dificuldades de conviver com Transtorno Afetivo Bipolar (TAB), ilustrado pela protagonista Rue, que possui a doença. A série é um exemplo de representação desse grupo, nas artes, falando sobre a doença de maneira responsável. Contudo, ainda é pouca a representatividade desses indivíduos em livros, filmes e séries, que quando possuem um papel, muitas vezes, são personagens secundários e não há um aprofundamento de sua história. Desse modo, esse processo agrava os esteriótipos contra essas pessoas e afeta sua autoestima, pois eles não se sentem representados.
-
-Portanto, faz-se imprescindível que a mídia - instrumento de ampla abrangência - informe a sociedade a respeito dessas doenças e sobre como conviver com pessoas portadoras, por meio de comerciais periódicos nas redes sociais e debates televisivos, a fim de formar cidadãos informados. Paralelamente, o Estado - principal promotor da harmonia social - deve promover a representatividade de pessoas com transtornos mentais nas artes, por intermédio de incentivos monetários para produzir obras sobre o tema, com o fato de amenizar o problema. Assim, o corpo civil será mais educado e os estigmas contra indivíduos com patologias mentais não serão uma realidade do Brasil.`
-            },
-            {
-                titulo: "Redação Nota 1000 - ENEM 2020",
-                tema: "O estigma associado às doenças mentais na sociedade brasileira",
-                autor: "Julia Vieira, MA",
-                texto: `No filme estadunidense “Coringa”, o personagem principal, Arthur Fleck, sofre de um transtorno mental que o faz ter episódios de riso exagerado e descontrolado em público, motivo pelo qual é frequentemente atacado nas ruas. Em consonância com a realidade de Arthur, está a de muitos cidadãos, já que o estigma associado às doenças mentais na sociedade brasileira ainda configura um desafio a ser sanado. Isso ocorre, seja pela negligência governamental nesse âmbito, seja pela discriminação desta classe por parcela da população verde-amarela. Dessa maneira, é imperioso que essa chaga social seja resolvida, a fim de que o longa norte-americano não mais reflita o contexto atual da nação.
-
-Nessa perspectiva, acerca da lógica referente aos transtornos da mente, é válido retomar o aspecto supracitado quanto à omissão estatal neste caso. Segundo a OMS (Organização Mundial da Saúde), o Brasil é o país que apresenta o maior número de casos de depressão da América Latina e, mesmo diante desse cenário alarmante, os tratamentos às doenças mentais, quando oferecidos, não são, na maioria das vezes, eficazes. Isso acontece pela falta de investimento público em centros especializados no cuidado para com essas condições. Consequentemente, muitos portadores, sobretudo aqueles de menor renda, não são devidamente tratados, contribuindo para sua progressiva marginalização perante o corpo social. Este quadro de inoperância das esferas de poder exemplifica a teoria das Instituições Zumbis, do sociólogo Zygmunt Bauman, que as descreve como presentes na sociedade, mas que não cumprem seu papel com eficácia. Desse modo, é imprescindível que, para a refutação da teoria do estudioso polonês, essa problemática seja revertida.
-
-Paralelamente ao descaso das esferas governamentais nessa questão, é fundamental o debate acerca da aversão de parte dos civis ao grupo em pauta, uma vez que ambos são impasses para sua completa socialização. Esse preconceito se dá pelos errôneos ideais de felicidade disseminados na sociedade como metas universais. Entretanto, essas concepções segregam os indivíduos entre os “fortes” e os “fracos”, em que tais fracos, geralmente, integram a classe em discussão, dado que não atingem essas metas estabelecidas, como a estabilidade emocional. Por conseguinte, aqueles que não alcançam os objetivos são estigmatizados e excluídos do tecido social. Tal conjuntura segregacionista - os que possuem algum tipo de transtorno, nesse caso -- na teia social. Dessa maneira, essa problemática urge ser solucionada para que o princípio da alemã seja validado no país tupiniquim.
+    <header>
+        <h1>REDAÇÕES NOTA MIL TOPZERAS</h1>
+        <p class="descricao">Uma coleção de redações nota 1000 do ENEM para estudo e inspiração</p>
+    </header>
+    
+    <main>
+        <article class="redacao">
+            <h2 class="redacao-titulo">Redação Nota 1000 - ENEM 2020</h2>
+            <div class="redacao-info">
+                <strong>Tema:</strong> O estigma associado às doenças mentais na sociedade brasileira
+                <br>
+                <strong>Autor(a):</strong> Isabella Gadelha, PA
+            </div>
+            <div class="redacao-texto">
+                <p>Nise da Silveira foi uma renomada psiquiatra brasileira que, indo contra a comunidade médica tradicional da sua época, lutou a favor de um tratamento humanizado para pessoas com transtornos psicológicos. No contexto nacional atual, indivíduos com patologias mentais ainda sofrem com diversos estigmas criados. Isso ocorre, pois faltam informações corretas sobre o assunto e, também, existe uma carência de representatividade desse grupo nas mídias.</p>
+                
+                <p>Primariamente, vale ressaltar que a ignorância é uma das principais causas da criação de preconceitos contra portadores de doenças psiquiátricas. Sob essa ótica, o pintor holandês Vincent Van Gogh foi alvo de agressões físicas e psicológicas por sofrer de transtornos neurológicos e não possuir o tratamento adequado. O ocorrido com o artista pode ser presenciado no corpo social brasileiro, visto que, apesar de uma parcela significativa da população lidar com alguma patologia mental, ainda são propagadas informações incorretas sobre o tema. Esse processo fortalece a ideia de que integrantes não são capazes de conviver em sociedade, reforçando estigmas antigos e criando novos. Dessa forma, a ignorância contribui para a estigmatização desses indivíduos e prejudica o coletivo.</p>
+                
+                <p>Ademais, a carência de representatividade nos veículos midiáticos fomenta o preconceito contra pessoas com distúrbios psicológicos. Nesse sentido, a série de televisão da emissora HBO, "Euphoria", mostra as dificuldades de conviver com Transtorno Afetivo Bipolar (TAB), ilustrado pela protagonista Rue, que possui a doença. A série é um exemplo de representação desse grupo, nas artes, falando sobre a doença de maneira responsável. Contudo, ainda é pouca a representatividade desses indivíduos em livros, filmes e séries, que quando possuem um papel, muitas vezes, são personagens secundários e não há um aprofundamento de sua história. Desse modo, esse processo agrava os esteriótipos contra essas pessoas e afeta sua autoestima, pois eles não se sentem representados.</p>
+                
+                <p>Portanto, faz-se imprescindível que a mídia - instrumento de ampla abrangência - informe a sociedade a respeito dessas doenças e sobre como conviver com pessoas portadoras, por meio de comerciais periódicos nas redes sociais e debates televisivos, a fim de formar cidadãos informados. Paralelamente, o Estado - principal promotor da harmonia social - deve promover a representatividade de pessoas com transtornos mentais nas artes, por intermédio de incentivos monetários para produzir obras sobre o tema, com o fato de amenizar o problema. Assim, o corpo civil será mais educado e os estigmas contra indivíduos com patologias mentais não serão uma realidade do Brasil.</p>
+            </div>
+        </article>
+        
+        <article class="redacao">
+            <h2 class="redacao-titulo">Redação Nota 1000 - ENEM 2020</h2>
+            <div class="redacao-info">
+                <strong>Tema:</strong> O estigma associado às doenças mentais na sociedade brasileira
+                <br>
+                <strong>Autor(a):</strong> Julia Vieira, MA
+            </div>
+            <div class="redacao-texto">
+                <p>No filme estadunidense "Coringa", o personagem principal, Arthur Fleck, sofre de um transtorno mental que o faz ter episódios de riso exagerado e descontrolado em público, motivo pelo qual é frequentemente atacado nas ruas. Em consonância com a realidade de Arthur, está a de muitos cidadãos, já que o estigma associado às doenças mentais na sociedade brasileira ainda configura um desafio a ser sanado. Isso ocorre, seja pela negligência governamental nesse âmbito, seja pela discriminação desta classe por parcela da população verde-amarela. Dessa maneira, é imperioso que essa chaga social seja resolvida, a fim de que o longa norte-americano não mais reflita o contexto atual da nação.</p>
+                
+                <p>Nessa perspectiva, acerca da lógica referente aos transtornos da mente, é válido retomar o aspecto supracitado quanto à omissão estatal neste caso. Segundo a OMS (Organização Mundial da Saúde), o Brasil é o país que apresenta o maior número de casos de depressão da América Latina e, mesmo diante desse cenário alarmante, os tratamentos às doenças mentais, quando oferecidos, não são, na maioria das vezes, eficazes. Isso acontece pela falta de investimento público em centros especializados no cuidado para com essas condições. Consequentemente, muitos portadores, sobretudo aqueles de menor renda, não são devidamente tratados, contribuindo para sua progressiva marginalização perante o corpo social. Este quadro de inoperância das esferas de poder exemplifica a teoria das Instituições Zumbis, do sociólogo Zygmunt Bauman, que as descreve como presentes na sociedade, mas que não cumprem seu papel com eficácia. Desse modo, é imprescindível que, para a refutação da teoria do estudioso polonês, essa problemática seja revertida.</p>
+                
+                <p>Paralelamente ao descaso das esferas governamentais nessa questão, é fundamental o debate acerca da aversão de parte dos civis ao grupo em pauta, uma vez que ambos são impasses para sua completa socialização. Esse preconceito se dá pelos errôneos ideais de felicidade disseminados na sociedade como metas universais. Entretanto, essas concepções segregam os indivíduos entre os "fortes" e os "fracos", em que tais fracos, geralmente, integram a classe em discussão, dado que não atingem essas metas estabelecidas, como a estabilidade emocional. Por conseguinte, aqueles que não alcançam os objetivos são estigmatizados e excluídos do tecido social. Tal conjuntura segregacionista - os que possuem algum tipo de transtorno, nesse caso -- na teia social. Dessa maneira, essa problemática urge ser solucionada para que o princípio da alemã seja validado no país tupiniquim.</p>
+                
+                <p>Portanto, são essenciais medidas operantes para a reversão do estigma associado às doenças mentais na sociedade brasileira. Para isso, compete ao Ministério da Saúde investir na melhora da qualidade dos tratamentos a essas doenças nos centros públicos especializados de cuidados, destinando mais medicamentos e contratando, por concursos, mais profissionais da área, como psiquiatras e enfermeiros. Isso deve ser feito por meio de recursos autorizados pelo Tribunal de Contas da União - órgão que opera feitos públicos - com o fito de potencializar o atendimento a esses pacientes e oferecê-los um tratamento eficaz. Ademais, palestras devem ser realizadas em espaços públicos sobre os malefícios das falsas concepções de prazer e da importância do acolhimento dos vulneráveis. Assim, os ideais inalcançáveis não mais serão instrumentos segregadores e, finalmente, a cotação de Fleck não mais representará a dos brasileiros.</p>
+            </div>
+        </article>
+        
+        <article class="redacao">
+            <h2 class="redacao-titulo">Redação Nota 1000 - ENEM 2021</h2>
+            <div class="redacao-info">
+                <strong>Tema:</strong> Invisibilidade e registro civil: garantia de acesso à cidadania no Brasil
+                <br>
+                <strong>Autor(a):</strong> Gabriel Borges
+            </div>
+            <div class="redacao-texto">
+                <p>Norberto Bobbio, cientista político italiano, afirma que a democracia é um processo que tem, em seu cerne, o objetivo de garantia a representatividade política de todas as pessoas. Para que o mecanismo democrático funcione, então, é fundamental apresentar uma rede estatal que dê acesso a diversos recursos, como alimentação, moradia, educação, segurança, saúde e participação eleitoral. Contudo, muitos brasileiros, por não terem uma certidão de nascimento, são privados desses direitos básicos e têm seus próprios papéis de cidadãos invisibilizados. Logo, deve-se discutir as raízes históricas desse problema e as suas consequências nocivas.</p>
+                
+                <p>Primeiramente, vê-se que o apagamento social gerado pela falta de registro civil apresenta suas origens no passado. Para o sociólogo Karl Marx, as desigualdades são geradas por condições econômicas anteriores ao nascimento de cada ser, de forma que, infelizmente, nem todos recebam as mesmas oportunidades financeiras e sociais ao longo da vida. Sob esse viés, o materialismo histórico de Marx é válido para analisar o drama dos que vivem sem certificado de nascimento no Brasil, pois é provável que eles pertençam a linhagens familiares que também não tiveram acesso ao registro. Assim, a desigualdade social continua sendo perpetuada, afetando grupos que já foram profundamente atingidos pelas raízes coloniais e patriarcais da nação. Dessa forma, é essencial que o governo quebre esse ciclo que exclui, sobretudo, pobres, mulheres, indígenas e pretos.</p>
+                
+                <p>Além disso, nota-se que esse processo injusto cria chagas profundas na democracia nacional. No livro "Vidas Secas", de Graciliano Ramos, é apresentada a história de uma família sertaneja que luta para sobreviver sem apoio estatal. Nesse contexto, os personagens Fabiano e Sinhá Vitória têm dois filhos que não possuem certidão de nascimento. Por conta dessa situação de registro irregular, os dois meninos sequer apresentam nomes, o que é impensável na sociedade contemporânea, uma vez que o nome de um indivíduo faz parte da construção integral da sua identidade. Ademais, as crianças retratadas na obra são semelhantes a muitas outras do Brasil que não usufruem de políticas públicas da infância e da adolescência devido à falta de documentos, o que precisa ser modificado urgentemente para que se estabeleça uma democracia realmente participativa tal qual aquela prevista por Bobbio.</p>
+                
+                <p>Portanto, o registro civil deve ser incentivado de maneira mais efetiva no país. O Estado criará um mutirão nacional intitulado "Meu Registro, Minha Identidade". Esse projeto funcionará por meio da união entre movimentos sociais, comunidades locais e órgãos governamentais municipais, estaduais e federais, visto que é necessária uma ação coletiva visindo a consolidação da cidadania brasileira. Com o trabalho desses agentes, serão enviados profissionais a todas as cidades em busca de pessoas que, finalmente, terão suas certidões de nascimento confeccionadas, além de receberem acompanhamento e incentivo para a realização de cadastro em outros serviços importantes do sistema nacional. Por conseguinte, o Brasil estará agindo ativamente para reparar suas injustiças históricas e para solidificar sua democracia, de maneira que os seus cidadãos sejam vistos igualmente.</p>
+            </div>
+        </article>
+        
+        <article class="redacao">
+            <h2 class="redacao-titulo">Redação Nota 1000 - ENEM 2023</h2>
+            <div class="redacao-info">
+                <strong>Tema:</strong> Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil
+                <br>
+                <strong>Autor(a):</strong> Maria Luiza Januzzi, RJ
+            </div>
+            <div class="redacao-texto">
+                <p>De acordo com a pensadora brasileira Djamila Ribeiro, o primeiro passo a ser tomado para solucionar uma questão é tirá-la da invisibilidade. Porém, no contexto atual do Brasil, as mulheres enfrentam diversos desafios para que seu trabalho de cuidado seja reconhecido, gerando graves impactos em suas vidas, como a falta de destaque. Nesse sentido, essa problemática ocorre em virtude da omissão governamental e da influência midiática.</p>
+                
+                <p>Dessa forma, em primeiro plano, é preciso atentar para o descaso estatal em relação aos obstáculos enfrentados diariamente por mulheres que trabalham como cuidadoras. Segundo John Locke, "as leis fizeram-se para os homens e não para as leis". No entanto, a inércia governamental direcionada à tais pessoas não cumpre com o previsto na Carta Magna, visto que a falta de investimento em políticas públicas causa dificuldades no âmbito profissional deste setor - como a desvalorização salarial. Isso contribui para que suas necessidades sejam cada vez mais negligenciadas.</p>
+                
+                <p>Além disso, a influência dos meios digitais é um fator agravante no que tange ao problema. Para Chimamanda Adichie, mudar o "status quo" - o estado atual das coisas - é sempre penoso. Essa conjuntura pode ser observada no papel que a mídia possui na luta diária de mulheres que exercem o trabalho do cuidado ou doméstico, uma vez que ela auxilia no fortalecimento de uma mentalidade social machista no país. Isso ocasionou o silenciamento da população feminina, enraizando a lógica do patriarcado na sociedade. Diante do exposto, as mulheres perdem a voz na busca por direitos profissionais na área de cuidado, ao ser propagada a ideia de que essa função é sua, e somente sua, obrigação.</p>
+                
+                <p>Portanto, é necessário que esta situação seja dissolvida. Para isso, o governo, órgão responsável por garantir a condição e existência de todos, deve prover apoio psicológico e financeiro às cuidadoras, por meio de investimentos e pelo exercício das leis, a fim de sanar a vulnerabilidade socioeconômica existente no cotidiano desses grupos. Paralelamente, os meios de comunicação precisam combater a lógica de inferioridade e a concepção machista agregadas a este trabalho. Assim, será possível solucionar esta questão, pois será retirada do cenário de invisibilidade, como propõe Djamila.</p>
+            </div>
+        </article>
+        
+        <article class="redacao">
+            <h2 class="redacao-titulo">Redação Nota 1000 - ENEM 2023</h2>
+            <div class="redacao-info">
+                <strong>Tema:</strong> Desafios para o enfrentamento da invisibilidade do trabalho de cuidado realizado pela mulher no Brasil
+                <br>
+                <strong>Autor(a):</strong> Arthur Sanches Sales, PA
+            </div>
+            <div class="redacao-texto">
+                <p>Conforme estudos demográficos realizados pelo Instituto Brasileiro de Geografia e Estatística (IBGE), a população de idosos crescerá drasticamente nas próximas décadas. Nesse contexto, o trabalho de cuidado realizado pelas mulheres é fundamental para acolher essa parcela populacional. Todavia, a invisibilidade e a omissão statal são desafios que perpetuam o descaso sofrido por essas trabalhadoras no Brasil. Logo, faz-se imperiosa a tomada de medidas que resolvam esse contexto de emergência generalizada.</p>
+                
+                <p>Sob essa perspectiva, é crucial que a escassez de debates acerca da importância das atividades de assistência seja superada. A esse respeito, a ilustre filósofa Djamila Ribeiro defende que, para atuar em uma situação, deve-se, antes de tudo, tirá-la da invisibilidade. Entretanto, o panorama nacional destoa do pensamento da autora, já que o alto índica de empregadas domésticas em condições ocupacionais precárias não é enxergado pelo círculo social, de modo que discussões sobre essa questão sejam priorizadas, dificultando intervenções nesse problema. Então, essa nebulosidade precisa ser exposta para conscientizar a sociedade.</p>
+                
+                <p>Outrossim, vale ressaltar de que maneira a negligência do estado fomenta a marginalização das cuidadoras. A partir disso, o sociólogo polonês Zygmunt Bauman utiliza o termo "Instituição Zumbi" para simbolizar as entidades que não cumprem seu papel previamente estabelecido. Seguindo o raciocínio, é possível compreender o Poder Executivo como um exemplo da ideia do expoente da Sociologia, uma vez que a sua função de garantir dignidade profissional a todos não está sendo cumprida em sua totalidade, pois muitas trabalhadoras de acolhimento ainda encontram-se em situações indignas. Por isso, a conduta governamental necessita ser reformulada para assegurar os direitos dessas profissionais.</p>
+                
+                <p>Portanto, torna-se primordial mitigar a marginalidade do trabalho de cuidado realizado pelo gênero feminino. Dessa forma, o Ministério da Cidadania, enquanto responsável por políticas cidadãs, deve propagar dados e pesquisas que revelam a gravidade do esquecimento sofrido pelas cuidadoras, por meio de plataformas midiáticas de destaque, a fim de atingir o maior contingente possível e conscientizá-lo. Ademais, a coletividade, por intermédio do Ministério público, precisa cobrar do Governo Federal ações efetivas de proteção ocupacional às empregadas domésticas, com o intuito de promover o labor digno a esses indivíduos. Assim, a acolhida da nova geração de pessoas da terceira idade poderá ser efetiva.</p>
+            </div>
+        </article>
+    </main>
+    
+    <footer>
+        <p>Site criado para estudo - Redações Nota 1000 do ENEM</p>
+    </footer>
+</body>
+</html>Paralelamente ao descaso das esferas governamentais nessa questão, é fundamental o debate acerca da aversão de parte dos civis ao grupo em pauta, uma vez que ambos são impasses para sua completa socialização. Esse preconceito se dá pelos errôneos ideais de felicidade disseminados na sociedade como metas universais. Entretanto, essas concepções segregam os indivíduos entre os “fortes” e os “fracos”, em que tais fracos, geralmente, integram a classe em discussão, dado que não atingem essas metas estabelecidas, como a estabilidade emocional. Por conseguinte, aqueles que não alcançam os objetivos são estigmatizados e excluídos do tecido social. Tal conjuntura segregacionista - os que possuem algum tipo de transtorno, nesse caso -- na teia social. Dessa maneira, essa problemática urge ser solucionada para que o princípio da alemã seja validado no país tupiniquim.
 
 Portanto, são essenciais medidas operantes para a reversão do estigma associado às doenças mentais na sociedade brasileira. Para isso, compete ao Ministério da Saúde investir na melhora da qualidade dos tratamentos a essas doenças nos centros públicos especializados de cuidados, destinando mais medicamentos e contratando, por concursos, mais profissionais da área, como psiquiatras e enfermeiros. Isso deve ser feito por meio de recursos autorizados pelo Tribunal de Contas da União - órgão que opera feitos públicos - com o fito de potencializar o atendimento a esses pacientes e oferecê-los um tratamento eficaz. Ademais, palestras devem ser realizadas em espaços públicos sobre os malefícios das falsas concepções de prazer e da importância do acolhimento dos vulneráveis. Assim, os ideais inalcançáveis não mais serão instrumentos segregadores e, finalmente, a cotação de Fleck não mais representará a dos brasileiros.`
             },
